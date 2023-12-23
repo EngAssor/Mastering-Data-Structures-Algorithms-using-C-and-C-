@@ -1,0 +1,55 @@
+there is a typse of recursion 
+# --> frist type is tail recursion 
+it means there no opration will be done after call the recursion function 
+also mean all actions happen beofre the return.
+exmple :
+void fun(int n) 
+{
+    if (n>0)
+    {
+        printf("%d ",n);
+        fun(n-1);// in this line if we add any opration or after it then it won't be a tail recursion
+
+    }
+}
+       tail recursion  VS     loops 
+speed :    time-O(n)     :    time-O(n)
+space :    space-O(n)    :    space-O(n)
+in this case loop is better than recursion (memory wise)
+for that some compilers when it finds that u are using a tail recursion it tarns it as loop opbject code in oreder to optmize the space cunsmtion# --> second type is head recursion 
+it maens there is no opration will be done befor calling the recursion function
+also mean all the action happens after return.
+exmple :
+void fun(int n) 
+{
+    if (n>0)
+    {
+        fun(n-1);// note that here u call the function if any code executed before this line then it's not a head recursion
+
+        printf("%d ",n);
+
+    }
+}
+
+# --> third tree recursion
+there tow types liner recursion thats the normal recursion 
+like :
+void fun(int n) 
+{
+    if (n>0)
+    {
+        printf("%d ",n);
+        fun(n-1);// u call the function one time 
+    }
+}
+and tree recursion u call the function multable times in one function
+void fun(int n) 
+{
+    if (n>0)
+    {
+        printf("%d ",n);
+        fun(n-1);
+        fun(n-1); // note here u call again this will make it a teree recursion
+    }
+}
+--------------------------------------------------------------------------------
