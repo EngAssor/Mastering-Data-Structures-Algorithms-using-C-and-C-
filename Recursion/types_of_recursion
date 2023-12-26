@@ -75,3 +75,18 @@ void FunB(int n)
     }
 }
 ----------------------------------------------------------------------------------
+# --> nested Recursion 
+when U pass the function call as parameter to recursion function 
+code :
+int fun(int n)
+{
+    if(n>100)
+    {
+        return n-10;
+    }
+    else 
+    {
+        return fun(fun(n+11));// here is the nasted recursion.
+
+    }
+}
