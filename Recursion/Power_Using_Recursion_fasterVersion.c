@@ -5,10 +5,15 @@ int POW(int m,int n)
     {
         return 1;
     }
+    else if(n%2==0)
+    {
+        return POW(m*m,n/2);
+    }
     else
     {
-        return POW(m,n-1)*m;
+        return m*POW(m*m,(n-1)/2);
     }
+    
 }
 
 int main(void)

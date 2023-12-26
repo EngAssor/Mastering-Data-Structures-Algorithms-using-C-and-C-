@@ -14,10 +14,9 @@ void fun(int n)
 }
        tail recursion  VS     loops 
 speed :    time-O(n)     :    time-O(n)
-space :    space-O(n)    :    space-O(1)
+space :    space-O(n)    :    space-O(n)
 in this case loop is better than recursion (memory wise)
-but recursion is more readable spicaly in mathmatics problems
-for that some compilers when it finds that u are using a tail recursion it tarns it as loop opbject code in oreder to optmize the space cunsmtion # --> second type is head recursion 
+for that some compilers when it finds that u are using a tail recursion it tarns it as loop opbject code in oreder to optmize the space cunsmtion# --> second type is head recursion 
 it maens there is no opration will be done befor calling the recursion function
 also mean all the action happens after return.
 exmple :
