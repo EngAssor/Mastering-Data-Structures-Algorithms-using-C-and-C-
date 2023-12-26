@@ -53,3 +53,25 @@ void fun(int n)
     }
 }
 --------------------------------------------------------------------------------
+# --> fourth indirect recursion   
+when have there diifrant functions like A , B and C 
+when A is calling B and B calling C  and C calling A and become a ciurcal  that's called indirect recursion
+
+void FunA(int n)
+{
+    if(n>0)
+    {
+        printf("%d",n);
+        FunB(n-1); // call funB
+    }
+}
+
+void FunB(int n)
+{
+    if(n>1)
+    {
+        printf("%d",n);
+        FunA(n/2); //call funA
+    }
+}
+----------------------------------------------------------------------------------
