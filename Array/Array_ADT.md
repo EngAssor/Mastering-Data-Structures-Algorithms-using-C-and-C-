@@ -41,12 +41,14 @@ length= 6 //note this the length is the number of existing elements
         printf(A[i]);
     }
 2-Add(x) ==>o(1)
+  '
     A[Length]=x;
     Length++;
-     
+   '  
 3-insert(index,element)==>o(n)
     this function should store the new element without overwriting any element so if the index is not empty it has to shift the elements
     to shift them
+   '
     for(i=Length;i>index,i--)
     {
         A[i]=A[i-1];
@@ -54,9 +56,16 @@ length= 6 //note this the length is the number of existing elements
     then insert the new element
     a[index]=element;
     Length++;
-     
-4-
-
-
+  '   
+4-Delete(index)
+in this function we remove the element by it's index and after that we have to shift the array to no left any free space becase if we let it free then we always have to check if the index we want is free or not so shift the array save alot of time and work for that we first get the index then shift the array
+'
+x=A[index]
+for(i=index;i<Length-1;i++)
+{
+    A[i]=A[i+1];
+}
+Length--;
+'
 
      
