@@ -28,6 +28,35 @@ we will discuss the following topics :
     length is the no.of elements is present in the array 
 
     see  Array_ADT.c file
+
+------------------------------------------
+lets do some oprations on array
+we have array A 
+int A[10]={8,3,7,12,6,9};
+size=10
+length= 6 //note this the length is the number of existing elments 
+1- Display()
+    for(i=0;i<Length;i++)
+    {
+        printf(A[i]);
+    }
+2-Add(x) ==>o(1)
+    A[Length]=x;
+    Length++;
      
+3-insert(index,element)==>o(n)
+    this function shloud store the new element without overwrite on any element so if the indext not empty it has to shift the elements
+    to shift them
+    for(i=Length;i>index,i--)
+    {
+        A[i]=A[i-1];
+    }
+    then insert the new element
+    a[index]=element;
+    Length++;
+     
+4-
+
+
 
      
