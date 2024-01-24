@@ -59,13 +59,11 @@ length= 6 //note this the length is the number of existing elements
   `   
 4-Delete(index)
 in this function we remove the element by it's index and after that we have to shift the array to no left any free space becase if we let it free then we always have to check if the index we want is free or not so shift the array save alot of time and work for that we first get the index then shift the array
-`
-x=A[index]
+`x=A[index];
 for(i=index;i<Length-1;i++)
 {
     A[i]=A[i+1];
 }
-Length--;
-`
+Length--;`
 
      
