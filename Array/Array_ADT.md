@@ -119,3 +119,28 @@ in this method, we swap the key element with the head element which makes findin
         }
 }
 ```
+### 2-Binary Search
+ is a searching algorithm for finding an element's position in a sorted array.
+ we have high ,low and mid 
+ high point to the end of the array and low point to the begining of it and mid equal to high+low/2. pointing to the mid of the array .
+ in this algorsim to find the elemen we are searching for. we compere the element with the value the mid pointing for if they are equal we done our job if not so we see if the it lower than mid then the high will equal mid-1 and cuclute the mid again .if it was higher than the mid low will equal mid+1 and culceat the new mid until we find the element .
+ ```
+ BinarySearch(l,h,key)
+{
+    while(l<=h)
+   {
+    mid=(l+h)/2;
+    if(key== A[mid])
+        return mid;
+    if(key<mid)
+        {
+            h=mid-1;
+        }
+    else
+       {
+        l=mid+1;
+       }
+}
+return -1;
+ }
+```
