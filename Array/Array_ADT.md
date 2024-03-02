@@ -144,3 +144,96 @@ in this method, we swap the key element with the head element which makes findin
 return -1;
  }
 ```
+
+## 6-Set(index,element)
+to set an element you to konw it's index 
+we have frist to ensure the index it's within the boundries 
+```
+void Set(int index, int x)
+{
+    if(index >=0 && index < Length)
+        A[index]=x;
+}
+```
+## 7-Get(index)
+to get an element you to konw it's index 
+we have frist to ensure the index it's within the boundries 
+```
+int Get(int index)
+{
+      if(index >=0 && index < Length)
+        return  A[index];
+}
+```
+## 8-Max()
+to get the maxmum element in the array we compper every elemen with eachother
+
+```
+int Max(void)
+{
+    int max=A[0];
+    for(int i =1;i<Length;i++)
+    {
+        if(A[i]>max)
+        {
+            max=A[i];
+        }
+    }
+    return max;
+}
+```
+## 9-Min()
+```
+int Min(void)
+{
+    int min=A[0];
+    for(int i =1;i<Length;i++)
+    {
+        if(A[i]<min)
+        {
+            min=A[i];
+        }
+    }
+    return min;
+}
+```
+## 10-Avg()
+Avg = total / Length
+
+```
+int Avg(int A[],Length)
+{
+    int total=0;
+    for(int i =1;i<Length;i++)
+    {
+        total=total+A[i];
+    }
+    return total/Length;
+}
+```
+## Reverse and Shift an Array
+### Reverse 
+to do that we have tow methods first with using an another array (B)to copy the elements in reverse oreder then copy it to orignal array (A).
+```
+for(i=Length-1,j=0;i>=0;i--,j++) //=> n times
+{
+    B[j]=A[i];
+}
+for(i=0;i<Length;i++) //=> n times
+{
+    A[i]=B[i];
+}
+// all take 2n
+// that's  O(n) .
+```
+secoand method to swap array elements  with eachother frist with last and so on.
+using two poniters to elments unitl i is > than J or j is < i
+
+```
+for(i=0,j=Length-1;i<j;i++,j--)
+{
+    temp=A[i];
+    A[i]=A[j];
+    A[j]=temp;
+}
+```
