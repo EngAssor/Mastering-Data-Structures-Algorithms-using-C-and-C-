@@ -237,3 +237,31 @@ for(i=0,j=Length-1;i<j;i++,j--)
     A[j]=temp;
 }
 ```
+## sorted array 
+### how insert an element to a sorted array
+simply we have to put this element to it's right place by compering it with the other elements 
+becasue the array is sorted then we comper the new element with last till we find a value that the new element is greater than it 
+```
+void insert_to_sorted(int x)
+{
+    int i =length - 1;
+    while(A[i]>x)
+    {
+        A[i+1]=A[i];
+        i--;
+    }
+    A[i+1]=x;
+}
+```  
+but how to know if it was sorted or not so we need
+```
+int Is_Sorted(int A[], int n)
+{
+    int i=0;
+    for(i=0;i<n-1;i++)
+    {
+        if(A[i]>A[i+1])
+            return 0;
+    }
+    return 1;
+}
