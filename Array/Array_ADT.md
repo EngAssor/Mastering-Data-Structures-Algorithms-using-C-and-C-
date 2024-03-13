@@ -265,3 +265,28 @@ int Is_Sorted(int A[], int n)
     }
     return 1;
 }
+```
+## Merging Arrays
+merging hera we have two arrays we want to merge them into one array (sorted).
+we have to compere each element from array A with elements in array B and put the small value in new array C .
+untill one of pointrer to this array reache the end of it then we have to copy the remain of the oher array .
+```
+i=0 
+j=0
+k=0
+while (i<n && j<m) // n & m are the arrays size 
+{
+    if (A[i]<B[j])
+    {
+        C[k++]=A[i++];
+    }
+    else
+    {
+                C[k++]=B[j++];
+    }
+}
+for(;i<n;i++) // copy the remain elemntes
+            C[k++]=A[i];
+for(;j<m;j++)
+            C[k++]=B[j];
+```
